@@ -1,11 +1,14 @@
 var http = require("http");
 var fs = require("fs");
-var obj1;
-fs.readFile('provinces.json', 'utf-8', function (err, data) {
+var obj;
+
+var provincesEtats = '';
+fs.readFile('etats.json' || 'provinces.json', 'utf-8', function (err, data) {
 if (err) return console.error(err);
 obj = JSON.parse(data)
 
 });
+
 
 function affiche_objet(obj) {
 	var ch='<table>'
